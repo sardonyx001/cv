@@ -6,9 +6,9 @@ export const RESUME_DATA = {
   initials: "LJ",
   location: "Tokyo, Japan",
   locationLink: "https://www.google.com/maps/place/Tokyo,+Japan",
-  about: "Aspiring Full Stack Engineer. Currently working in Tokyo.",
+  about: "Full Stack Engineer. Currently working in Tokyo.",
   summary:
-    "I have experience in building and maintaining web applications using Node.js, TypeScript, Flask, and PostgreSQL. I am passionate about building products that are scalable, maintainable, and accessible. I am also interested in learning more about DevOps and MLOps.",
+    "A Full Stack Engineer with 2+ years of experience building and maintaining backend services and web applications, currently working on production reliability for Rakuten Travel.",
   avatarUrl: Selfie.src,
   personalWebsiteUrl: "https://sardonyx001.github.io/",
   contact: {
@@ -52,12 +52,12 @@ export const RESUME_DATA = {
     {
       company: "Rakuten Group Inc.",
       link: "https://corp.rakuten.co.jp/",
-      badges: ["On-site", "Java", "Spring Boot", "Kubernetes", "Jenkins"],
+      badges: ["On-site", "Java", "Spring Boot", "Golang", "Python", "TypeScript", "Kubernetes", "Jenkins"],
       title: "Application Engineer",
       start: "2025/4",
       end: "Present",
       description:
-        "Joined as a New Grad Application Engineer. Mostly working on bug fixes and troubleshooting performance issues as part of the SRE team for Rakuten Travel.",
+        "Spearheading the migration of 1,600+ cron jobs from VMs to Kubernetes with Apache Airflow, coordinating across several service teams. Driving Cloud (Kubernetes) migrations for Spring Boot services; authored developer tooling to aid in the investigation and documentation process.",
     },
     {
       company: "Sigma-i Co., Ltd",

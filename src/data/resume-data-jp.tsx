@@ -6,9 +6,9 @@ export const RESUME_DATA = {
   initials: "LJ",
   location: "東京都",
   locationLink: "https://www.google.com/maps/place/Tokyo,+Japan",
-  about: "フルスタックエンジニアを目指している都内ソフトウェアエンジニア。",
+  about: "都内在住のフルスタックエンジニア。",
   summary:
-    "Node.js、Flask、PostgreSQL/MySQLを使ったWebアプリケーションの構築と保守の経験があります。スケーラブルで保守性が高く、使いやすいサービス・プロダクト開発に熱心があります。また、DevOpsとMLOpsについてもっと学びたいと思っています。TUIが好きで、最近GolangとRustを勉強中です。",
+    "バックエンドサービスおよびWebアプリケーションの構築・保守に2年以上の経験を持つフルスタックエンジニア。現在は楽天トラベルのプロダクション信頼性向上に取り組んでいます。",
   avatarUrl: Selfie.src,
   personalWebsiteUrl: "https://sardonyx001.github.io/",
   contact: {
@@ -52,12 +52,12 @@ export const RESUME_DATA = {
     {
       company: "楽天グループ株式会社",
       link: "https://corp.rakuten.co.jp/",
-      badges: ["On-site", "Java", "Spring Boot", "Kubernetes", "Jenkins"],
+      badges: ["On-site", "Java", "Spring Boot", "Golang", "Python", "TypeScript", "Kubernetes", "Jenkins"],
       title: "Application Engineer",
       start: "2025/4",
       end: "現在",
       description:
-        "新卒でApplication Engineerとして入社。楽天トラベルのSREチームの一員として、主にバグ修正やパフォーマンス問題のトラブルシューティングを担当。",
+        "1,600件以上のcronジョブをVMからKubernetes+Apache Airflowへ移行するプロジェクトを主導し、複数のサービスチームと連携。Spring BootサービスのCloud（Kubernetes）移行も推進しており、調査・ドキュメント化を支援する開発ツールを作成。",
     },
     {
       company: "Sigma-i株式会社",
