@@ -52,17 +52,17 @@ export const RESUME_DATA = {
     {
       company: "楽天グループ株式会社",
       link: "https://corp.rakuten.co.jp/",
-      badges: ["On-site", "Java", "Spring Boot", "Golang", "Python", "TypeScript", "Kubernetes", "Jenkins"],
+      badges: ["On-site", "Java", "Spring Boot", "Golang", "Python", "Ruby", "TypeScript", "React.js", "Kubernetes", "Jenkins", "Oracle", "MongoDB", "Elasticsearch"],
       title: "Application Engineer",
       start: "2025/4",
       end: "現在",
       description:
-        "1,600件以上のcronジョブをVMからKubernetes+Apache Airflowへ移行するプロジェクトを主導し、複数のサービスチームと連携。Spring BootサービスのCloud（Kubernetes）移行も推進しており、調査・ドキュメント化を支援する開発ツールを作成。",
+        "複数のレガシー本番サービスのSpring Boot 3.x系へのアップグレードを主導し、破壊的変更の解消・非推奨APIの移行・テストカバレッジ85%超への改善・パフォーマンステストを実施。Apache Airflow + KubernetesPodOperatorを用いたVMから1,600件超のcronジョブをKubernetesへ移行するプロジェクトを牽引。Jennifer APMとSQL分析によりパフォーマンスのボトルネックを特定・解消し、51台の本番サーバーにライブアクセスできるMCPサーバーを構築してインシデント調査時間を大幅短縮。",
     },
     {
       company: "Sigma-i株式会社",
       link: "https://www.sigmailab.com/",
-      badges: ["リモート", "Python", "Flask/FastAPI", "MySQL", "Redis"],
+      badges: ["リモート", "Python", "Ruby", "Flask/FastAPI", "React.js", "MySQL", "Redis"],
       title: "バックエンド開発",
       start: "2023/5",
       end: "2025/3",
@@ -82,7 +82,7 @@ export const RESUME_DATA = {
     {
       company: "MobileCreate株式会社",
       link: "https://www.mcinc.jp/",
-      badges: ["リモート", "Typescript", "Next.js", "PostgreSQL"],
+      badges: ["リモート", "Typescript", "React.js", "Next.js", "PostgreSQL"],
       title: "フルスタック開発",
       start: "2023/11",
       end: "2024/3",
@@ -107,15 +107,6 @@ export const RESUME_DATA = {
     "C/C++",
   ],
   projects: [
-    {
-      title: "ul",
-      techStack: ["Golang", "Self-hosted"],
-      description: "小さいURL短縮サービス",
-      link: {
-        label: "ul.jamell.dev",
-        href: "https://ul.jamell.dev",
-      },
-    },
     {
       title: "Whats this kanji?",
       techStack: ["Kotlin", "Android"],

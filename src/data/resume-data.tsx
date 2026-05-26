@@ -52,17 +52,17 @@ export const RESUME_DATA = {
     {
       company: "Rakuten Group Inc.",
       link: "https://corp.rakuten.co.jp/",
-      badges: ["On-site", "Java", "Spring Boot", "Golang", "Python", "TypeScript", "Kubernetes", "Jenkins"],
+      badges: ["On-site", "Java", "Spring Boot", "Golang", "Python", "Ruby", "TypeScript", "React.js", "Kubernetes", "Jenkins", "Oracle", "MongoDB", "Elasticsearch"],
       title: "Application Engineer",
       start: "2025/4",
       end: "Present",
       description:
-        "Spearheading the migration of 1,600+ cron jobs from VMs to Kubernetes with Apache Airflow, coordinating across several service teams. Driving Cloud (Kubernetes) migrations for Spring Boot services; authored developer tooling to aid in the investigation and documentation process.",
+        "Led Spring Boot upgrades to 3.x across multiple legacy production services, resolving breaking dependency changes, migrating deprecated APIs, improving test coverage to >85% from 10%, and conducting performance tests. Spearheading the migration of 1,600+ cron jobs from bare-metal VMs to Kubernetes using Apache Airflow + KubernetesPodOperator, coordinating across several service teams; built a multi-cluster POC with custom logging, error propagation, and a CI/CD DAG generation pipeline. Proactively identified and resolved production performance bottlenecks through Jennifer APM profiling and SQL analysis; implemented OpenTelemetry and performance testing tooling across several applications. Built an MCP server giving the team live access to Jennifer APM across 51 production servers, reducing incident investigation time from hours to minutes. Driving containerization and Cloud (Kubernetes) migrations for 100+ legacy Spring Boot services; built Claude Code AI skills and a custom code search plugin bridging Bitbucket, Confluence, and Jira to automate dependency investigation. Developed internal React.js tooling that integrates Bitbucket, Confluence, and Jira to automate frontend bug investigation and documentation workflows.",
     },
     {
       company: "Sigma-i Co., Ltd",
       link: "https://www.sigmailab.com/",
-      badges: ["Remote", "Python", "Flask", "MySQL", "Redis"],
+      badges: ["Remote", "Python", "Ruby", "Flask", "React.js", "MySQL", "Redis"],
       title: "Backend Developer",
       start: "2023/5",
       end: "2025/3",
@@ -82,7 +82,7 @@ export const RESUME_DATA = {
     {
       company: "MobileCreate",
       link: "https://www.mcinc.jp/",
-      badges: ["Remote", "Typescript", "Next.js", "PostgreSQL"],
+      badges: ["Remote", "Typescript", "React.js", "Next.js", "PostgreSQL"],
       title: "Full Stack Developer",
       start: "2023/11",
       end: "2024/3",
@@ -107,15 +107,6 @@ export const RESUME_DATA = {
     "C/C++",
   ],
   projects: [
-    {
-      title: "ul",
-      techStack: ["Golang", "Self-hosted"],
-      description: "Simple lightweight URL shortener",
-      link: {
-        label: "ul.jamell.dev",
-        href: "https://ul.jamell.dev",
-      },
-    },
     {
       title: "Whats this kanji?",
       techStack: ["Kotlin", "Android"],
