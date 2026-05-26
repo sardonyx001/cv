@@ -57,7 +57,7 @@ export const RESUME_DATA = {
       start: "2025/4",
       end: "現在",
       description:
-        "複数のレガシー本番サービスのSpring Boot 3.x系へのアップグレードを主導し、破壊的変更の解消・非推奨APIの移行・テストカバレッジ85%超への改善・パフォーマンステストを実施。Apache Airflow + KubernetesPodOperatorを用いたVMから1,600件超のcronジョブをKubernetesへ移行するプロジェクトを牽引。Jennifer APMとSQL分析によりパフォーマンスのボトルネックを特定・解消し、51台の本番サーバーにライブアクセスできるMCPサーバーを構築してインシデント調査時間を大幅短縮。",
+        "複数のレガシー本番サービスのSpring Boot 3.x系へのアップグレードを主導し、破壊的変更の解消・非推奨APIの移行・テストカバレッジ85%超への改善・パフォーマンステストを実施。Apache Airflow + KubernetesPodOperatorを用いたVMから1,600件超のcronジョブをKubernetesへ移行するプロジェクトを牽引。Jennifer APMとSQL分析によりパフォーマンスのボトルネックを特定・解消し、51台の本番サーバーにライブアクセスできるMCPサーバーを構築してインシデント調査時間を大幅短縮し、複数チームの30名超に普及。",
     },
     {
       company: "Sigma-i株式会社",
