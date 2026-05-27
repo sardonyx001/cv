@@ -8,7 +8,7 @@ export const RESUME_DATA = {
   locationLink: "https://www.google.com/maps/place/Tokyo,+Japan",
   about: "都内在住のフルスタックエンジニア。",
   summary:
-    "バックエンドサービスおよびWebアプリケーションの構築・保守に2年以上の経験を持つフルスタックエンジニア。現在は楽天トラベルのプロダクション信頼性向上に取り組んでいます。",
+    "バックエンドサービスおよびWebアプリケーションの構築・保守に3年以上の経験を持つフルスタックエンジニア。現在は日本最大手のオンライン旅行代理店・楽天トラベル（楽天グループ）にて、プロダクション信頼性向上とインフラモダナイゼーションに取り組んでいます。",
   avatarUrl: Selfie.src,
   personalWebsiteUrl: "https://sardonyx001.github.io/",
   contact: {
@@ -57,7 +57,7 @@ export const RESUME_DATA = {
       start: "2025/4",
       end: "現在",
       description:
-        "複数のレガシー本番サービスのSpring Boot 3.x系へのアップグレードを主導し、破壊的変更の解消・非推奨APIの移行・テストカバレッジ85%超への改善・パフォーマンステストを実施。Apache Airflow + KubernetesPodOperatorを用いたVMから1,600件超のcronジョブをKubernetesへ移行するプロジェクトを牽引。Jennifer APMとSQL分析によりパフォーマンスのボトルネックを特定・解消し、51台の本番サーバーにライブアクセスできるMCPサーバーを構築してインシデント調査時間を大幅短縮し、複数チームの30名超に普及。",
+        "複数のレガシー本番サービスのSpring Boot 3.x系へのアップグレードを主導し、破壊的変更の解消・非推奨APIの移行・テストカバレッジ10%から85%超への改善・パフォーマンステストを実施。Apache Airflow + KubernetesPodOperatorを用いてVMから1,600件超のcronジョブをKubernetesへ移行するプロジェクトを牽引し、マルチクラスターPOCのカスタムロギング・エラー伝播・CI/CD DAG生成パイプラインを構築。Jennifer APMとSQL分析によりパフォーマンスのボトルネックを能動的に特定・解消し、OpenTelemetryとパフォーマンステストツールを複数アプリに導入。51台の本番サーバーへのライブアクセスを提供するMCPサーバーを構築し、インシデント調査時間を大幅短縮、複数チームの30名超に普及。100件超のレガシーSpring Bootサービスのコンテナ化・Cloud（Kubernetes）移行を推進し、Bitbucket・Confluence・Jiraを横断するコード検索プラグインとClaude Code AIスキルを構築して依存関係調査を自動化。Bitbucket・Confluence・Jiraを統合した社内React.jsツールを開発し、フロントエンドのバグ調査・ドキュメント化ワークフローを自動化。",
     },
     {
       company: "Sigma-i株式会社",
