@@ -56,8 +56,14 @@ export const RESUME_DATA = {
       title: "Application Engineer",
       start: "2025/4",
       end: "現在",
-      description:
-        "複数のレガシー本番サービスのSpring Boot 3.x系へのアップグレードを主導し、破壊的変更の解消・非推奨APIの移行・テストカバレッジ10%から85%超への改善・パフォーマンステストを実施。Apache Airflow + KubernetesPodOperatorを用いてVMから1,600件超のcronジョブをKubernetesへ移行するプロジェクトを牽引し、マルチクラスターPOCのカスタムロギング・エラー伝播・CI/CD DAG生成パイプラインを構築。Jennifer APMとSQL分析によりパフォーマンスのボトルネックを能動的に特定・解消し、OpenTelemetryとパフォーマンステストツールを複数アプリに導入。51台の本番サーバーへのライブアクセスを提供するMCPサーバーを構築し、インシデント調査時間を大幅短縮、複数チームの30名超に普及。100件超のレガシーSpring Bootサービスのコンテナ化・Cloud（Kubernetes）移行を推進し、Bitbucket・Confluence・Jiraを横断するコード検索プラグインとClaude Code AIスキルを構築して依存関係調査を自動化。Bitbucket・Confluence・Jiraを統合した社内React.jsツールを開発し、フロントエンドのバグ調査・ドキュメント化ワークフローを自動化。",
+      description: [
+        "複数のレガシー本番サービスのSpring Boot 3.x系へのアップグレードを主導し、破壊的変更の解消・非推奨APIの移行・テストカバレッジ10%から85%超への改善・パフォーマンステストを実施",
+        "Apache Airflow + KubernetesPodOperatorを用いてVMから1,600件超のcronジョブをKubernetesへ移行するプロジェクトを牽引し、マルチクラスターPOCのカスタムロギング・エラー伝播・CI/CD DAG生成パイプラインを構築",
+        "Jennifer APMとSQL分析によりパフォーマンスのボトルネックを能動的に特定・解消し、OpenTelemetryとパフォーマンステストツールを複数アプリに導入",
+        "51台の本番サーバーへのライブアクセスを提供するMCPサーバーを構築し、インシデント調査時間を大幅短縮、複数チームの30名超に普及",
+        "100件超のレガシーSpring Bootサービスのコンテナ化・Cloud（Kubernetes）移行を推進し、Bitbucket・Confluence・Jiraを横断するコード検索プラグインとClaude Code AIスキルを構築して依存関係調査を自動化",
+        "Bitbucket・Confluence・Jiraを統合した社内React.jsツールを開発し、フロントエンドのバグ調査・ドキュメント化ワークフローを自動化",
+      ],
     },
     {
       company: "Sigma-i株式会社",
@@ -66,8 +72,10 @@ export const RESUME_DATA = {
       title: "バックエンド開発",
       start: "2023/5",
       end: "2025/3",
-      description:
-        "主にFlask Webアプリのバックエンド開発＋ Jsのフロントエンド開発。Github ActionsによるCI/CDの構築。生成AIデモの開発とデプロイ。",
+      description: [
+        "主力プロダクト（データ入力・取得・レポート生成Webアプリ）のバックエンドを構築・保守",
+        "スタートアップの初期段階からチームの一員として参画",
+      ],
     },
     {
       company: "ゆめみ株式会社",
@@ -76,8 +84,9 @@ export const RESUME_DATA = {
       title: "バックエンド開発",
       start: "2024/2",
       end: "2024/3",
-      description:
-        "2週間のインターンに通じてGolangのEchoフレームワークを利用した個人注文システムのAPIを開発。",
+      description: [
+        "ドメイン駆動設計（DDD）を適用した個人注文システムのAPIを開発",
+      ],
     },
     {
       company: "MobileCreate株式会社",
@@ -86,31 +95,42 @@ export const RESUME_DATA = {
       title: "フルスタック開発",
       start: "2023/11",
       end: "2024/3",
-      description:
-        "4ヶ月間のインターンを通じてバスのリアルタイム位置データ（GTFS-RT）を利用するルート検索・LINEを介する通知機能を持つWebアプリの開発。主にバックエンドとインフラを担当。",
+      description: [
+        "バスのリアルタイム位置データ（GTFS-RT）を利用するルート検索・LINEを介する通知機能を持つWebアプリを開発",
+        "4ヶ月間のインターンを通じて主にバックエンドとインフラを担当",
+      ],
     },
   ],
   skills: [
-    "Python",
     "Java",
+    "Python",
     "Golang",
-    "JavaScript/TypeScript",
-    "Flask",
-    "FastAPI",
+    "TypeScript",
+    "Spring Boot",
     "React/Next.js",
-    "Node.js",
+    "Kubernetes",
     "Docker",
+    "Oracle",
     "PostgreSQL",
     "MySQL",
-    "Bash",
-    "Perl",
-    "C/C++",
+    "MongoDB",
+    "Elasticsearch",
   ],
   projects: [
     {
+      title: "Marsa",
+      techStack: ["Golang", "SvelteKit", "SQLite", "Docker", "Caddy"],
+      description:
+        "Coolifyの代替となるミニマルなセルフホストPaaS。自動TLS・GitHubプッシュデプロイ・Zitadel（OIDC）によるSSO・goroutineベースの非同期デプロイワーカープールを備える",
+      link: {
+        label: "marsa.jamell.dev",
+        href: "https://marsa.jamell.dev",
+      },
+    },
+    {
       title: "Whats this kanji?",
       techStack: ["Kotlin", "Android"],
-      description: "Xや他の所から漢字を解説してくれるAndroidアプリ",
+      description: "オフラインKANJIDIC2辞書を使った日本語テキスト処理・漢字ルックアップAndroidアプリ",
       link: {
         label: "github.com/Sardonyx001/whats-this-kanji",
         href: "https://github.com/Sardonyx001/whats-this-kanji",
