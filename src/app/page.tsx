@@ -115,13 +115,14 @@ export default function Page() {
             return (
               <Card key={work.company}>
                 <CardHeader>
-                  <div className="flex items-center justify-between gap-x-2 text-base">
-                    <h3 className="inline-flex items-center justify-center gap-x-1 font-semibold leading-none">
-                      <a className="hover:underline" href={work.link}>
-                        {work.company}
-                      </a>
-
-                      <span className="inline-flex flex-wrap gap-1">
+                  <div className="flex items-start justify-between gap-x-2 text-base">
+                    <div className="flex flex-col gap-y-1">
+                      <h3 className="font-semibold leading-none">
+                        <a className="hover:underline" href={work.link}>
+                          {work.company}
+                        </a>
+                      </h3>
+                      <span className="flex flex-wrap gap-1">
                         {work.badges.map((badge) => (
                           <Badge
                             variant="secondary"
@@ -132,8 +133,8 @@ export default function Page() {
                           </Badge>
                         ))}
                       </span>
-                    </h3>
-                    <div className="text-sm tabular-nums text-gray-500">
+                    </div>
+                    <div className="text-sm tabular-nums text-gray-500 shrink-0">
                       {work.start} - {work.end}
                     </div>
                   </div>
