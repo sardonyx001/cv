@@ -121,7 +121,7 @@ export default function Page() {
                         {work.company}
                       </a>
 
-                      <span className="inline-flex gap-x-1">
+                      <span className="inline-flex flex-wrap gap-1">
                         {work.badges.map((badge) => (
                           <Badge
                             variant="secondary"
