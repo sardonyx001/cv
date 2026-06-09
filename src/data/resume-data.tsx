@@ -13,7 +13,6 @@ export const RESUME_DATA = {
   personalWebsiteUrl: "https://sardonyx001.github.io/",
   contact: {
     email: "hey@jamell.dev",
-    tel: "+8107091962885",
     social: [
       {
         name: "GitHub",
