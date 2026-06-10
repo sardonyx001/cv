@@ -1,26 +1,28 @@
-import { Metadata } from "next";
-import { RESUME_DATA } from "@/data/resume-data";
+import type { Metadata } from "next";
+import { getResumeData } from "@/data/resume-data";
 import { ResumeLayout } from "@/components/resume-layout";
 
+const data = getResumeData("en");
+
 export const metadata: Metadata = {
-  title: `${RESUME_DATA.name} | ${RESUME_DATA.about}`,
-  description: RESUME_DATA.summary,
+  title: `${data.name} | ${data.about}`,
+  description: data.summary,
   openGraph: {
-    title: `${RESUME_DATA.name} | ${RESUME_DATA.about}`,
-    description: RESUME_DATA.summary,
+    title: `${data.name} | ${data.about}`,
+    description: data.summary,
     type: "website",
   },
   twitter: {
     card: "summary",
-    title: `${RESUME_DATA.name} | ${RESUME_DATA.about}`,
-    description: RESUME_DATA.summary,
+    title: `${data.name} | ${data.about}`,
+    description: data.summary,
   },
 };
 
 export default function Page() {
   return (
     <ResumeLayout
-      data={RESUME_DATA}
+      data={data}
       labels={{
         about: "About",
         workExperience: "Work Experience",

@@ -41,7 +41,7 @@ export function ResumeLayout({ data, labels }: Props) {
             <div className="flex gap-x-1 pt-1 font-mono text-sm text-muted-foreground print:hidden">
               {data.contact.email ? (
                 <Button className="size-8" variant="outline" size="icon" asChild>
-                  <a href={`mailto:${data.contact.email}`}>
+                  <a href={`mailto:${data.contact.email}`} aria-label="Send email">
                     <MailIcon className="size-4" />
                   </a>
                 </Button>
@@ -54,7 +54,7 @@ export function ResumeLayout({ data, labels }: Props) {
                   size="icon"
                   asChild
                 >
-                  <a href={social.url} target="_blank" rel="noopener noreferrer">
+                  <a href={social.url} target="_blank" rel="noopener noreferrer" aria-label={social.name}>
                     <social.icon className="size-4" />
                   </a>
                 </Button>
@@ -124,17 +124,11 @@ export function ResumeLayout({ data, labels }: Props) {
                 <h4 className="font-mono text-sm leading-none">{work.title}</h4>
               </CardHeader>
               <CardContent className="mt-2 text-xs">
-                {Array.isArray(work.description) ? (
-                  <ul className="ml-4 list-outside list-disc space-y-1">
-                    {(work.description as ReadonlyArray<string>).map(
-                      (bullet, i) => (
-                        <li key={i}>{bullet}</li>
-                      ),
-                    )}
-                  </ul>
-                ) : (
-                  work.description
-                )}
+                <ul className="ml-4 list-outside list-disc space-y-1">
+                  {work.description.map((bullet, i) => (
+                    <li key={i}>{bullet}</li>
+                  ))}
+                </ul>
               </CardContent>
             </Card>
           ))}

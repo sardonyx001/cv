@@ -1,5 +1,7 @@
 import type { ComponentType } from "react";
 
+export type Locale = "en" | "jp";
+
 export interface ResumeData {
   name: string;
   initials: string;
@@ -31,7 +33,7 @@ export interface ResumeData {
     title: string;
     start: string;
     end: string;
-    description: string | ReadonlyArray<string>;
+    description: ReadonlyArray<string>;
   }>;
   skills: ReadonlyArray<string>;
   projects: ReadonlyArray<{

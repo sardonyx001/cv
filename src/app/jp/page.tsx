@@ -1,26 +1,28 @@
-import { Metadata } from "next";
-import { RESUME_DATA } from "@/data/resume-data-jp";
+import type { Metadata } from "next";
+import { getResumeData } from "@/data/resume-data";
 import { ResumeLayout } from "@/components/resume-layout";
 
+const data = getResumeData("jp");
+
 export const metadata: Metadata = {
-  title: `${RESUME_DATA.name.split("\n")[0]} | ${RESUME_DATA.about}`,
-  description: RESUME_DATA.summary,
+  title: `${data.name.split("\n")[0].trim()} | ${data.about}`,
+  description: data.summary,
   openGraph: {
-    title: `${RESUME_DATA.name.split("\n")[0]} | ${RESUME_DATA.about}`,
-    description: RESUME_DATA.summary,
+    title: `${data.name.split("\n")[0].trim()} | ${data.about}`,
+    description: data.summary,
     type: "website",
   },
   twitter: {
     card: "summary",
-    title: `${RESUME_DATA.name.split("\n")[0]} | ${RESUME_DATA.about}`,
-    description: RESUME_DATA.summary,
+    title: `${data.name.split("\n")[0].trim()} | ${data.about}`,
+    description: data.summary,
   },
 };
 
 export default function Page() {
   return (
     <ResumeLayout
-      data={RESUME_DATA}
+      data={data}
       labels={{
         about: "About",
         workExperience: "経験",

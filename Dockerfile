@@ -1,24 +1,22 @@
-# Use the official lightweight Node.js 18 image.
-# https://hub.docker.com/_/node
-FROM node:18-slim
+FROM node:22-slim AS base
+ENV PNPM_HOME="/pnpm"
+ENV PATH="$PNPM_HOME:$PATH"
+RUN corepack enable
 
-# Create and change to the app directory.
-WORKDIR /usr/src/app
+FROM base AS deps
+WORKDIR /app
+COPY package.json pnpm-lock.yaml ./
+RUN pnpm install --frozen-lockfile
 
-# Copy application dependency manifests to the container image.
-# A wildcard is used to ensure both package.json AND package-lock.json are copied.
-COPY package*.json ./
-
-# Install all dependencies.
-RUN npm install
-
-# Copy local code to the container image.
+FROM base AS builder
+WORKDIR /app
+COPY --from=deps /app/node_modules ./node_modules
 COPY . .
+RUN pnpm build
 
-# Build the app
-RUN npm run build
-
+FROM node:22-slim AS runner
+WORKDIR /app
+RUN npm install -g serve
+COPY --from=builder /app/out ./out
 EXPOSE 3000
-
-# Run the web service on container startup.
-CMD [ "npx", "serve@latest","out" ]
+CMD ["serve", "out", "-l", "3000"]

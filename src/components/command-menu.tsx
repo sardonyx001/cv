@@ -14,7 +14,7 @@ import {
 import { Button } from "./ui/button";
 import { CommandIcon } from "lucide-react";
 import Confetti from "react-confetti";
-import { useLayoutEffect, useState } from "react";
+import { useEffect, useState } from "react";
 
 interface Props {
   links: { url: string; title: string }[];
@@ -115,7 +115,7 @@ export const CommandMenu = ({ links }: Props) => {
 function useWindowSizes() {
   const [windowSize, setWindowSize] = useState({ width: 0, height: 0 });
 
-  useLayoutEffect(() => {
+  useEffect(() => {
     window.addEventListener("resize", updateWindowSize);
     updateWindowSize();
     return () => window.removeEventListener("resize", updateWindowSize);
