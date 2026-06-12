@@ -36,12 +36,12 @@ export default function RootLayout({
   children: React.ReactNode;
 }) {
   return (
-    <html lang="en" className={inter.className} suppressHydrationWarning>
+    <html lang="en" suppressHydrationWarning>
       <head>
         {/* eslint-disable-next-line @next/next/no-sync-scripts */}
         <script dangerouslySetInnerHTML={{ __html: localeScript }} />
       </head>
-      <body>
+      <body className={inter.className}>
         <Providers>
           <div className="m-3 flex items-end justify-end gap-2 print:hidden">
             <Link href="/">
