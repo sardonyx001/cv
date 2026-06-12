@@ -1,12 +1,10 @@
 import type { Metadata } from "next";
 import { Analytics } from "@vercel/analytics/react";
 import { Inter } from "next/font/google";
-import Link from "next/link";
-
 import "./globals.css";
-import { Badge } from "@/components/ui/badge";
 import { Providers } from "@/components/providers";
 import { ThemeToggle } from "@/components/theme-toggle";
+import { LanguageToggle } from "@/components/language-toggle";
 
 export const metadata: Metadata = {
   title: "Jamel Eddine Lassoued",
@@ -44,12 +42,7 @@ export default function RootLayout({
       <body className={inter.className}>
         <Providers>
           <div className="m-3 flex items-end justify-end gap-2 print:hidden">
-            <Link href="/">
-              <Badge>English / 英語</Badge>
-            </Link>
-            <Link href="/jp">
-              <Badge>Japanese / 日本語</Badge>
-            </Link>
+            <LanguageToggle />
             <ThemeToggle />
           </div>
           {children}
