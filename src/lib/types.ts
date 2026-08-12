@@ -13,6 +13,7 @@ export interface ResumeData {
   personalWebsiteUrl: string;
   contact: {
     email?: string;
+    phone?: string;
     social: ReadonlyArray<{
       name: string;
       url: string;
@@ -36,6 +37,7 @@ export interface ResumeData {
     description: ReadonlyArray<string>;
   }>;
   skills: ReadonlyArray<string>;
+  languages: ReadonlyArray<{ name: string; level: string }>;
   projects: ReadonlyArray<{
     title: string;
     techStack: ReadonlyArray<string>;
@@ -49,5 +51,6 @@ export interface ResumeLabels {
   workExperience: string;
   education: string;
   skills: string;
+  languages: string;
   projects: string;
 }

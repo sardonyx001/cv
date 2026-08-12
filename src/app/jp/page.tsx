@@ -28,6 +28,7 @@ export default function Page() {
         workExperience: "経験",
         education: "学歴",
         skills: "スキル",
+        languages: "言語",
         projects: "プロジェクト",
       }}
     />

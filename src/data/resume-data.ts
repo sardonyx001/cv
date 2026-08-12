@@ -17,6 +17,7 @@ interface LocalizedData {
   personalWebsiteUrl: string;
   contact: {
     email?: string;
+    phone?: string;
     social: Array<{
       name: string;
       url: string;
@@ -40,6 +41,7 @@ interface LocalizedData {
     description: L<string[]>;
   }>;
   skills: string[];
+  languages: Array<{ name: L; level: L }>;
   projects: Array<{
     title: string;
     techStack: string[];
@@ -68,6 +70,7 @@ const DATA: LocalizedData = {
   personalWebsiteUrl: "https://sardonyx001.github.io/",
   contact: {
     email: "hey@jamell.dev",
+    phone: "+81 070-9196-2885",
     social: [
       {
         name: "GitHub",
@@ -164,7 +167,7 @@ const DATA: LocalizedData = {
         en: ["Remote", "Golang", "DDD", "Echo", "PostgreSQL"],
         jp: ["リモート", "Golang", "DDD", "Echo", "PostgreSQL"],
       },
-      title: { en: "Backend Developer", jp: "バックエンド開発" },
+      title: { en: "Backend Developer Intern", jp: "バックエンド開発インターン" },
       start: "2024/2",
       end: { en: "2024/3", jp: "2024/3" },
       description: {
@@ -181,7 +184,7 @@ const DATA: LocalizedData = {
         en: ["Remote", "TypeScript", "React.js", "Next.js", "PostgreSQL"],
         jp: ["リモート", "TypeScript", "React.js", "Next.js", "PostgreSQL"],
       },
-      title: { en: "Full Stack Developer", jp: "フルスタック開発" },
+      title: { en: "Full Stack Developer Intern", jp: "フルスタック開発インターン" },
       start: "2023/11",
       end: { en: "2024/3", jp: "2024/3" },
       description: {
@@ -213,13 +216,19 @@ const DATA: LocalizedData = {
     "MongoDB",
     "Elasticsearch",
   ],
+  languages: [
+    { name: { en: "English", jp: "英語" }, level: { en: "Fluent", jp: "流暢" } },
+    { name: { en: "French", jp: "フランス語" }, level: { en: "Fluent", jp: "流暢" } },
+    { name: { en: "Arabic", jp: "アラビア語" }, level: { en: "Native", jp: "ネイティブ" } },
+    { name: { en: "Japanese", jp: "日本語" }, level: { en: "Fluent", jp: "流暢" } },
+  ],
   projects: [
     {
       title: "Marsa",
-      techStack: ["Golang", "SvelteKit", "SQLite", "Docker", "Caddy"],
+      techStack: ["Golang", "SvelteKit", "SQLite", "Docker", "Caddy", "WAF", "Rate Limiting"],
       description: {
-        en: "Minimal self-hosted PaaS replacing Coolify; deploys Docker Compose apps to a VPS with automatic TLS, GitHub push-to-deploy, SSO via Zitadel (OIDC), and a goroutine-based async deploy worker pool",
-        jp: "Coolifyの代替となるミニマルなセルフホストPaaS。自動TLS・GitHubプッシュデプロイ・Zitadel（OIDC）によるSSO・goroutineベースの非同期デプロイワーカープールを備える",
+        en: "Minimal self-hosted PaaS replacing Coolify; deploys Docker Compose apps to a VPS with automatic TLS, GitHub push-to-deploy, SSO via Zitadel (OIDC), JWT-protected APIs, and a goroutine-based async deploy worker pool",
+        jp: "Coolifyの代替となるミニマルなセルフホストPaaS。自動TLS・GitHubプッシュデプロイ・Zitadel（OIDC）によるSSO・JWT保護されたAPI・goroutineベースの非同期デプロイワーカープールを備える",
       },
       link: { label: "marsa.jamell.dev", href: "https://marsa.jamell.dev" },
     },
@@ -269,6 +278,10 @@ export function getResumeData(locale: Locale): ResumeData {
       description: l(w.description),
     })),
     skills: DATA.skills,
+    languages: DATA.languages.map((lang) => ({
+      name: l(lang.name),
+      level: l(lang.level),
+    })),
     projects: DATA.projects.map((p) => ({
       title: p.title,
       techStack: p.techStack,

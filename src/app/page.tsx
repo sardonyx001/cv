@@ -28,6 +28,7 @@ export default function Page() {
         workExperience: "Work Experience",
         education: "Education",
         skills: "Skills",
+        languages: "Languages",
         projects: "Projects",
       }}
     />

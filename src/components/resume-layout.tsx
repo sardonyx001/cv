@@ -2,7 +2,7 @@ import { Card, CardHeader, CardContent } from "@/components/ui/card";
 import { Badge } from "@/components/ui/badge";
 import { CommandMenu } from "@/components/command-menu";
 import { Section } from "@/components/ui/section";
-import { GlobeIcon, MailIcon } from "lucide-react";
+import { GlobeIcon, MailIcon, PhoneIcon } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import { ProjectCard } from "@/components/project-card";
 import Image from "next/image";
@@ -46,6 +46,13 @@ export function ResumeLayout({ data, labels }: Props) {
                   </a>
                 </Button>
               ) : null}
+              {data.contact.phone ? (
+                <Button className="size-8" variant="outline" size="icon" asChild>
+                  <a href={`tel:${data.contact.phone.replace(/[^+\d]/g, "")}`} aria-label="Call phone">
+                    <PhoneIcon className="size-4" />
+                  </a>
+                </Button>
+              ) : null}
               {data.contact.social.map((social) => (
                 <Button
                   key={social.name}
@@ -67,6 +74,7 @@ export function ResumeLayout({ data, labels }: Props) {
                   <span className="underline">{data.contact.email}</span>
                 </a>
               ) : null}
+              {data.contact.phone ? <span>{data.contact.phone}</span> : null}
             </div>
           </div>
           <Image
@@ -173,6 +181,18 @@ export function ResumeLayout({ data, labels }: Props) {
           <div className="flex flex-wrap gap-1">
             {data.skills.map((skill) => (
               <Badge key={skill}>{skill}</Badge>
+            ))}
+          </div>
+        </Section>
+
+        {/* Languages */}
+        <Section>
+          <h2 className="text-xl font-bold">{labels.languages}</h2>
+          <div className="flex flex-wrap gap-1">
+            {data.languages.map((lang) => (
+              <Badge key={lang.name} variant="secondary">
+                {lang.name} — {lang.level}
+              </Badge>
             ))}
           </div>
         </Section>
